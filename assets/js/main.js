@@ -88,11 +88,14 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive)
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-ScrollReveal({ 
+const sr = ScrollReveal({
+    origin: 'top',
     distance: '60px',
-    duration: 2500,
-    Delay: 400
-});
+    duration: 2000,
+    reset: true,
+    delay: 200,
+
+})
 ScrollReveal().reveal('.home__data, .home__social, .contact__container, .footer__container', { origin: 'top'});
 ScrollReveal().reveal('.home__image', { origin: 'bottom' });
 ScrollReveal().reveal('.about__data, .skills__data', { origin: 'left' });
